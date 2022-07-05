@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Stephanie's Weather-Dashboard</title>
+</head>
+
+
+  <!--Hero banner-->
+  <body>
+    <header>
+      <h1 class="app-title">Weather Dashboard</h1>
+    </header>
+
+    <!--Main container for the page, laid out as a grid-->
+    <div class="container flex grid grid-cols-3 gap-1">
+      <!--City search box and city search history-->
+      <div class="citysearch grid-cols-1 ml-2 mt-8 col-span-1">
+        <h1 class="font-bold text-lg">Search for a city:</h1>
+        <input
+          type="text"
+          id="cityinput"
+          placeholder="Enter City"/>
+        <button id="submitcity">
+         Search
+        </button>
+        <div></div>
+        <div class="city-history mt-3 grid grid-cols-1"></div>
+      </div>
+
+      <!--Current weather summary with daily cards-->
+      <div class="weathersummary grid grid-cols-1 ml-8 mt-8 h-2/5 col-span-2">
+        <div class="weather border border-black col-span-1"></div>
+        <div class="forecastcards mt-1 grid col-span-1 grid-cols-5 gap-5">
+          <div class="col-span-5">5 Days forecast:</div>
+          <!--Card 1-->
+          <div id="day1" class="daybox"></div>
+
+          <!--Card 2-->
+          <div id="day2" class="daybox"></div>
+        
+          <!--Card 3-->
+          <div id="day3" class="daybox"></div>
+
+          <!--Card 4-->
+          <div id="day4" class="daybox"></div>
+
+          <!--Card 5-->
+          <div id = "day5" class="daybox"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--load jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
