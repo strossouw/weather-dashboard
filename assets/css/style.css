@@ -1,0 +1,28 @@
+body{
+
+}
+
+.jumbotron {
+    color: black;
+    background-color: aqua;       
+}
+
+.grid-container {
+    background-color: darkgrey;
+}
+
+.citysearch button {
+    font-weight: bold;
+    font-size: larger;
+}
+
+#cityinput:hover {
+    border-color: chartreuse;
+    border-width: thick;
+}
+
+.citysearch button:hover {
+    border-color: chartreuse;
+    border-width: thick;
+}
+
