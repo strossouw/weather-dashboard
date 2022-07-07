@@ -12,13 +12,13 @@ var currUv = "";
 var tempArr = [];
 var cityArr = [];
 var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
-var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?units=metric";
+var apiOneCall = "https://api.openweathermap.org/data/2.5/onecall?units=imperial";
 
 //Main function to get weather data
 function getWeather() {
   clearContents();
   //First fetch current day data based on city name
-  fetch(apiUrl + cityName + "&units=metric&appid=" + apiKey).then(function (
+  fetch(apiUrl + cityName + "&units=imperial&appid=" + apiKey).then(function (
     response
   ) {
     if (response.ok) {
@@ -93,7 +93,7 @@ function displayWeather() {
 
   //Modify the elements text and append it to the div element on the page
   cityText.text(cityName + "(" + now.toLocaleString(DateTime.DATE_SHORT) + ")");
-  tempText.text("Temp: " + currTemp + " C");
+  tempText.text("Temp: " + currTemp + " F");
   windText.text("Wind: " + currWind + " KPH");
   humText.text("Humidity: " + currHum + "%");
   uvText.text(currUv);
@@ -124,7 +124,7 @@ function displayWeather() {
     humDailyText.addClass("daily-weather");
     dailyIcon.addClass(iconClass(tempArr[i].weather[0].main));
     dayDailyText.text(d);
-    tempDailyText.text("Temp: " + tempArr[i].temp.day + " C");
+    tempDailyText.text("Temp: " + tempArr[i].temp.day + " F");
     windDailyText.text("Wind: " + tempArr[i].wind_speed + " KPH");
     humDailyText.text("Humidity: " + tempArr[i].humidity + "%");
     $(dayClass).append(dayDailyText);
