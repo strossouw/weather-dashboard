@@ -4,7 +4,6 @@ var now = DateTime.now();
 var apiKey = "f0d05581b4701cfe6205823e1bb408ca";
 var lat;
 var lon;
-var cityName = "Ottawa";
 var currCon;
 var currTemp;
 var currWind;
