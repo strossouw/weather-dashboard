@@ -4,17 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!--Using Tailwind CSS instead of Bootstrap-->
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <!--Imported open source weather icons-->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Weather Dashboard</title>
+    <title>Stephanie' Weather Dashboard</title>
   </head>
 
-  <!--Hero banner-->
   <body>
     <header
       class="
@@ -26,7 +20,7 @@
         p-2
       "
     >
-      <h1 class="app-title">Weather Dashboard</h1>
+      <h1 class="app-title">Stephanie's Weather Dashboard</h1>
     </header>
 
     <!--Main container for the page, laid out as a grid-->
@@ -70,12 +64,12 @@
         <div class="city-history mt-3 grid grid-cols-1"></div>
       </div>
 
-      <!--Current weather summary with daily cards-->
+
       <div class="weathersummary grid grid-cols-1 ml-8 mt-8 h-2/5 col-span-2">
         <div class="weather border border-black col-span-1"></div>
         <div class="forecastcards mt-1 grid col-span-1 grid-cols-5 gap-5">
           <div class="col-span-5">5 Days forecast:</div>
-          <!--Card 1-->
+
           <div
             class="
               day1
@@ -87,7 +81,7 @@
               p-1
             "
           ></div>
-          <!--Card 2-->
+
           <div
             class="
               day2
@@ -99,7 +93,7 @@
               p-1
             "
           ></div>
-          <!--Card 3-->
+
           <div
             class="
               day3
@@ -111,7 +105,7 @@
               p-1
             "
           ></div>
-          <!--Card 1-->
+ 
           <div
             class="
               day4
@@ -123,7 +117,7 @@
               p-1
             "
           ></div>
-          <!--Card 1-->
+
           <div
             class="
               day5
@@ -139,7 +133,7 @@
       </div>
     </div>
 
-    <!--Using jquery and luxon-->
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.27.0/luxon.min.js"></script>

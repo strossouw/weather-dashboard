@@ -1,5 +1,4 @@
-//Initialize the luxon datetme object, declare global variables and APIs
-//Using openweathermao API(both single day data and onecall)
+
 var DateTime = luxon.DateTime;
 var now = DateTime.now();
 var apiKey = "f0d05581b4701cfe6205823e1bb408ca";
@@ -180,20 +179,19 @@ function saveHistory() {
 }
 
 //Return the weather icon based on the weather condition
+//these icons are not working. I am doing something wrong. Need to fix.
 function iconClass(condition) {
   if (condition == "Clouds") {
-    return "\uF2C1";
+    return "bi bi-cloud";
   } else if (condition == "Clear") {
-    return "\uF1D2";
+    return "bi bi-brightness-high";
   } else if (condition == "Haze") {
-    return "\uF2A7";
+    return "bi-cloud-haze";
   } else if (condition == "Rain") {
-    return "\uF2B6";
+    return "bi bi-cloud-rain";
   }
 }
 
-//If the search button is clicked, get the city name from the input
-//and store it in the global variable and run the getWeather function
 $(".container").on("click", "#submitcity", function () {
   cityName = $("#cityinput").val().trim();
   $("#cityinput").val("");
