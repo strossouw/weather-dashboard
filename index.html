@@ -4,36 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
- 
-    <!--Bootstrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Using Tailwind CSS instead of Bootstrap-->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!--Imported open source weather icons-->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Stephanie's Weather Dashboard</title>
+    <title>Weather Dashboard</title>
   </head>
 
-  <!--header/jumbotron-->
+  <!--Hero banner-->
   <body>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Weather Dashboard</h1>
-        <p class="lead">Use this weather dashboard to view the weather for the selected city.</p>
-      </div>
-    </div>
+    <header
+      class="
+        hero
+        bg-gradient-to-r
+        from-blue-500
+        to-indigo-900
+        text-white text-center
+        p-2
+      "
+    >
+      <h1 class="app-title">Weather Dashboard</h1>
+    </header>
 
     <!--Main container for the page, laid out as a grid-->
-
-    <div class="grid-container">
-    
+    <div class="container flex grid grid-cols-3 gap-1">
       <!--City search box and city search history-->
-
-      <div class="citysearch">
-        <h1>Search for a city:</h1>
-        <input type="text" id="cityinput" placeholder="Enter City"/>
-        <button id="submitcity">
+      <div class="citysearch grid-cols-1 ml-2 mt-8 col-span-1">
+        <h1 class="font-bold text-lg">Search for a city:</h1>
+        <input
+          type="text"
+          id="cityinput"
+          class="
+            shadow
+            appearance-none
+            border
+            rounded
+            w-full
+            py-2
+            px-3
+            text-gray-700
+            leading-tight
+            focus:outline-none focus:shadow-outline
+          "
+          placeholder="Enter City"
+        />
+        <button
+          id="submitcity"
+          class="
+            mt-3
+            bg-blue-500
+            hover:bg-blue-700
+            text-white
+            font-bold
+            py-2
+            px-10
+            rounded-full
+          "
+        >
           Search
         </button>
-        <div></div>
-        <div class="city-history"></div>
+        <div class="border-b-4 border-black p-2"></div>
+        <div class="city-history mt-3 grid grid-cols-1"></div>
       </div>
 
       <!--Current weather summary with daily cards-->
@@ -107,7 +141,9 @@
 
     <!--Using jquery and luxon-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.27.0/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

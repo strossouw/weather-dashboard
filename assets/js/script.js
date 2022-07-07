@@ -1,8 +1,11 @@
-const DateTime = luxon.DateTime;
+//Initialize the luxon datetme object, declare global variables and APIs
+//Using openweathermao API(both single day data and onecall)
+var DateTime = luxon.DateTime;
 var now = DateTime.now();
-const apiKey = "f0d05581b4701cfe6205823e1bb408ca";
+var apiKey = "f0d05581b4701cfe6205823e1bb408ca";
 var lat;
 var lon;
+var cityName = "Ottawa";
 var currCon;
 var currTemp;
 var currWind;
@@ -141,6 +144,7 @@ function populateHistory() {
     cityArr = [];
   }
   $(".city-history").empty();
+
   //For each city in the array, create a button and append it to the page
   for (i = 0; i < cityArr.length; i++) {
     var cityHist = $("<button>");
@@ -152,6 +156,7 @@ function populateHistory() {
     $(".city-history").append(cityHist);
   }
 }
+
 
 //Clear the weather data currently on the page
 function clearContents() {
@@ -177,13 +182,13 @@ function saveHistory() {
 //Return the weather icon based on the weather condition
 function iconClass(condition) {
   if (condition == "Clouds") {
-    return "wi wi-cloudy";
+    return "\uF2C1";
   } else if (condition == "Clear") {
-    return "wi wi-day-sunny";
+    return "\uF1D2";
   } else if (condition == "Haze") {
-    return "wi wi-smog";
+    return "\uF2A7";
   } else if (condition == "Rain") {
-    return "wi wi-rain";
+    return "\uF2B6";
   }
 }
 
